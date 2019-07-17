@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="http://laboratorioasesores.com/sites/default/files/favicon_asesores_0.png" type="image/png" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css"/>
+  <title>Solicitud accion-mejora</title>
+</head>
+<body>
+  <div class="container">
+    <form id="solicitudAccion">
+      <!-- HEADER -->
+      <div class="row no-gutters section rounded">
+        <div class="col-3">
+          <img src="http://laboratorioasesores.com/sites/default/files/logo.png" class="logo">
+        </div>
+        <div class="col headerText">
+          SOLICITUD DE MEJORA<br/>
+          REG-021-SGC<br/>
+        </div>
+      </div>
+      <!--  FORMS -->
+      <div class="row no-gutters rounded">
+        <div class="col">
+          <!-- Folio -->
+          <div class="row no-gutters section rounded">
+            <div class="col-6 headerText">Solicitud de accion de mejora</div>
+            <div class="col-2 headerText">Folio:</div>
+            <div class="col headerText"><input name="folio" id="folio" type="text" placeholder="folio" class="inputSize form-control"/></div>
+          </div>
+          <!-- personas -->
+          <div class="row no-gutters section rounded">
+            <div class="col">
+              <div class="row">
+                <div class="col headerText">Personas que participan en la propuesta</div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="row headerText">
+                    <div class="col">Nombre</div>
+                    <div class="col">Area</div>
+                    <div class="col">Puesto</div>
+                    <div class="col">Firma</div>
+                  </div>
+                  <div class="row">
+                    <div class="col"><input name="nombrePersona1" id="nombrePersona1" class="inputSize form-control" type="text" placeholder="Nombre"/></div>
+                    <div class="col"><input name="areaPersona1" id="areaPersona1" class="inputSize form-control" type="text" placeholder="Area"/></div>
+                    <div class="col"><input name="puestoPersona1" id="puestoPersona1" class="inputSize form-control" type="text" placeholder="Puesto"/></div>
+                    <div class="col"><input name="firmaPersona1" id="firmaPersona1" class="inputSize form-control" type="text" placeholder="Firma"/></div>
+                  </div>
+                  <div class="row">
+                    <div class="col"><input name="nombrePersona2" id="nombrePersona2" class="inputSize form-control" type="text" placeholder="Nombre"/></div>
+                    <div class="col"><input name="areaPersona2" id="areaPersona2" class="inputSize form-control" type="text" placeholder="Area"/></div>
+                    <div class="col"><input name="puestoPersona2" id="puestoPersona2" class="inputSize form-control" type="text" placeholder="Puesto"/></div>
+                    <div class="col"><input name="firmaPersona2" id="firmaPersona2" class="inputSize form-control" type="text" placeholder="Firma"/></div>
+                  </div>
+                  <div class="row">
+                    <div class="col"><input name="nombrePersona3" id="nombrePersona3" class="inputSize form-control" type="text" placeholder="Nombre"/></div>
+                    <div class="col"><input name="areaPersona3" id="areaPersona3" class="inputSize form-control" type="text" placeholder="Area"/></div>
+                    <div class="col"><input name="puestoPersona3" id="PuestoPersona3" class="inputSize form-control" type="text" placeholder="Puesto"/></div>
+                    <div class="col"><input name="firmaPersona4" id="firmaPersona3" class="inputSize form-control" type="text" placeholder="Firma"/></div>
+                  </div>
+                  <div class="row">
+                    <div class="col"><input name="nombrePersona4" id="nombrePersona4" class="inputSize form-control" type="text" placeholder="Nombre"/></div>
+                    <div class="col"><input name="areaPersona4" id="areaPersona4" class="inputSize form-control" type="text" placeholder="Area"/></div>
+                    <div class="col"><input name="puestoPersona4" id="puestoPersona4" class="inputSize form-control" type="text" placeholder="Puesto"/></div>
+                    <div class="col"><input name="firmaPersona4" id="firmaPersona4" class="inputSize form-control" type="text" placeholder="Firma"/></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  descripcion-->
+          <div class="row no-gutters section rounded">
+            <div class="col">
+              <div class="row">
+                <div class="col-4">Descripcion de la accion de mejora:</div>
+                <div class="col"><input name="descripcionMejora" id="descripcionMejora" class="inputSize form-control" type="text"/></div>
+              </div>
+              <div class="row">
+                <div class="col-4">Accion derivada de:</div>
+                <div class="col"><input name="accionDerivada" id="accionDerivada" class="inputSize form-control" type="text"/></div>
+              </div>
+            </div>
+          </div>
+          <!-- plan de accion -->
+          <div class="row no-gutters section rounded">
+            <div class="col">
+              <div class="row">
+                <div class="col headerText">Plan de accion</div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="row">
+                    <div class="col-4">Descripcion de la actividad</div>
+                    <div class="col">Responsable</div>
+                    <div class="col">Fecha de inicio</div>
+                    <div class="col">Fecha de cierre</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4"><input name="descripcionActividad1" id="descripcionActividad1" class="inputSize form-control" type="text" placeholder="Descripcion"/></div>
+                    <div class="col"><input name="responsableActividad1" id="responsableActividad1" class="inputSize form-control" type="text" placeholder="Responsable"/></div>
+                    <div class="col"><input name="inicioActividad1" id="inicioActividad1" class="inputSize form-control" type="date"/></div>
+                    <div class="col"><input name="cierreActividad1" id="cierreActividad1" class="inputSize form-control" type="date"/></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4"><input name="descripcionActividad2" id="descripcionActividad2" class="inputSize form-control" type="text" placeholder="Descripcion"/></div>
+                    <div class="col"><input name="responsableActividad2" id="responsableActividad2" class="inputSize form-control" type="text" placeholder="Responsable"/></div>
+                    <div class="col"><input name="inicioActividad2" id="inicioActividad2" class="inputSize form-control" type="date"/></div>
+                    <div class="col"><input name="cierreActividad2" id="cierreActividad2" class="inputSize form-control" type="date"/></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4"><input name="descripcionActividad3" id="descripcionActividad3" class="inputSize form-control" type="text" placeholder="Descripcion"/></div>
+                    <div class="col"><input name="responsableActividad3" id="responsableActividad3" class="inputSize form-control" type="text" placeholder="Responsable"/></div>
+                    <div class="col"><input name="inicioActividad3" id="inicioActividad3" class="inputSize form-control" type="date"/></div>
+                    <div class="col"><input name="cierreActividad3" id="cierreActividad3" class="inputSize form-control" type="date"/></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4"><input name="descripcionActividad4" id="descripcionActividad4" class="inputSize form-control" type="text" placeholder="Descripcion"/></div>
+                    <div class="col"><input name="responsableActividad4" id="responsableActividad4" class="inputSize form-control" type="text" placeholder="Responsable"/></div>
+                    <div class="col"><input name="inicioActividad4" id="inicioActividad4" class="inputSize form-control" type="date"/></div>
+                    <div class="col"><input name="cierreActividad4" id="cierreActividad4" class="inputSize form-control" type="date"/></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Aprobacion de la accion -->
+          <div class="row no-gutters section rounded">
+            <div class="col-3">Posibles beneficios a obtener</div>
+            <div class="col"><input name="beneficiosInput" id="beneficiosInput" class="inputSize form-control" type="text"/></div>
+          </div>
+          <div class="row no-gutters section rounded">
+            <div class="col">
+              <div class="row">
+                <div class="col headerText">Aprobacion de la accion</div>
+              </div>
+              <div class="row">
+                <div class="col-4">Nombre y firma del responsable de la accion:</div>
+                <div class="col"><input name="nombreResponsable" id="nombreResponsable" class="inputSize form-control" type="text"/></div>
+                <div class="col-2">
+                    <div class="form-check form-check-inline">
+                        <input name="confirmacionAprobacion" id="confirmacionAprobacion1" class="form-check-input" type="radio" value="Si"/>
+                        <label class="form-check-label" for="confirmacionAprobacion1">
+                          Si
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input name="confirmacionAprobacion" id="confirmacionAprobacion2" class="form-check-input" type="radio" value="No"/>
+                        <label class="form-check-label" for="confirmacionAprobacion2">
+                          No
+                        </label>
+                    </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-2">Observaciones:</div>
+                <div class="col"><input name="observacionesInput" id="observacionesInput" class="inputSize form-control" type="text" placeholder="observaciones"/></div>
+              </div>
+            </div>
+          </div>
+          <!-- Seguimiento de la accion -->
+          <div class="row no-gutters section rounded">
+            <div class="col">
+              <div class="row">
+                <div class="col headerText">Seguimiento de la accion</div>
+              </div>
+              <div class="row">
+                <div class="col-3">Resultados obtenidos, conclusion de la accion de mejora:</div>
+                <div class="col"><input name="resultadosInput" id="resultadosInput" class="inputSize form-control" type="text"/></div>
+              </div>
+              <div class="row">
+                <div class="col">Cierre de la accion:</div>
+                <div class="col">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="confirmacionSeguimiento" value="Si"/>
+                        <label class="form-check-label" for="confirmacionSeguimiento">
+                          Si
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="confirmacionSeguimiento" value="No"/>
+                        <label class="form-check-label" for="confirmacionSeguimiento">
+                          No
+                        </label>
+                    </div> 
+                </div>
+                <div class="col">Fecha:</div>
+                <div class="col"><input name="fechaCierreAccion" id="fechaCierreAccion" class="inputSize form-control" type="date"/></div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="row">
+                    <div class="col">Responsable de la aplicacion de l accion</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">Nombre</div>
+                    <div class="col">Firma</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">Puesto</div>
+                    <div class="col">Fecha</div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="row">
+                    <div class="col">Responsable del seguimiento</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">Nombre</div>
+                    <div class="col">Firma</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">Puesto</div>
+                    <div class="col">Fecha</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row no-gutters section rounded">
+          <div class="col text-center">
+              <button class="btn btn-primary" onclick="getData()">Guardar</button>
+          </div>
+      </div>
+    </form>
+    </div><!--END OF CONTAINER-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
