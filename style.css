@@ -23,3 +23,6 @@ body{
 .centerElement{
   margin: 0 auto;
 }
+.row{
+  margin-top: 3px;
+}
