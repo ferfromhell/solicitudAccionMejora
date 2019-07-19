@@ -1,6 +1,4 @@
-window.onload = () => {
-  getNames('nombreResponsable');
-};
+
 const  getNames = (id) => {
   const select = document.getElementById(id)
   const names = [];
