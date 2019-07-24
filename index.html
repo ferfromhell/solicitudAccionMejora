@@ -32,7 +32,7 @@
           <li class="">
             <a href="./planearAccion.html">Plan de accion</a>
           </li>
-          <li class="active">
+          <li class="">
             <a href="./seguimientoAccion.html">Seguimiento</a>
           </li>
       </ul>
@@ -47,156 +47,16 @@
         </div>
       </nav>
       <div class="container align-middle">
-          <table class="table">
-              <thead class="thead-dark">
-                <tr>
-                  <th scope="col"># folio</th>
-                  <th scope="col">Descripcion</th>
-                  <th scope="col">Status</th>
-                  <th scope="col"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                  <td>Seguimiento</td>
-                  <td>
-                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#aprobarSolicitud">
-                      Editar
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                  <td>Seguimiento</td>
-                  <td>
-                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#aprobarSolicitud">
-                      Editar
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                  <td>Seguimiento</td>
-                  <td>
-                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#aprobarSolicitud">
-                      Editar
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-      </div>
-      <div class="modal fade" id="aprobarSolicitud" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-content">
-            <div class="modal-header">
-              <!--Header-->
-                  <h5 class="modal-title" id="exampleModalLabel">Seguimiento de accion</h5>
-            </div><!--End modal header-->
-              <div class="modal-body">
-                <form id="solicitudAccion">
-                    <!-- Seguimiento de la accion -->
-                    <div class="row no-gutters section rounded">
-                      <div class="col">
-                        <div class="row">
-                          <div class="col headerText">Seguimiento de la accion</div>
-                        </div>
-                        <div class="row">
-                          <div class="col-3">Resultados obtenidos, conclusion de la accion de mejora:</div>
-                          <div class="col">
-                            <textarea name="resultadosInput" id="resultadosInput" class="inputSize form-control" placeholder="Resultados y conclusion" rows="6"></textarea>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col">Cierre de la accion:</div>
-                          <div class="col">
-                              <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="radio" name="confirmacionSeguimiento" value="Si"/>
-                                  <label class="form-check-label" for="confirmacionSeguimiento">
-                                    Si
-                                  </label>
-                              </div>
-                              <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="radio" name="confirmacionSeguimiento" value="No"/>
-                                  <label class="form-check-label" for="confirmacionSeguimiento">
-                                    No
-                                  </label>
-                              </div> 
-                          </div>
-                          <div class="col">Fecha:</div>
-                          <div class="col"><input name="fechaCierreAccion" id="fechaCierreAccion" class="inputSize form-control" type="date"/></div>
-                        </div>
-                      </div>
-                    </div>
-                    <!--responsabels-->
-                    <div class="row no-gutters section rounded">
-                      <div class="col">
-                        <div class="row">
-                            <div class="col text-center">Responsable de la aplicacion de la accion</div>
-                        </div>
-                        <div class="row">
-                            <div class="col">Nombre</div>
-                            <div class="col">
-                                <select name="nombreResponsableAplicacion" id="nombreResponsableAplicacion" class="inputSize form-control">
-                                    <option value="" disabled selected>Seleccionar...</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                          <div class="col">Puesto</div>
-                          <div class="col">
-                              <input name="puestoResponsableAplicacion" id="puestoResponsableAplicacion" class="inputSize form-control" type="text"/>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col">Fecha</div>
-                          <div class="col">
-                              <input name="fechaResponsableAplicacion" id="fechaResponsableAplicacion" class="inputSize form-control" type="date"/>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row no-gutters section rounded">
-                      <div class="col">
-                        <div class="row">
-                            <div class="col text-center">Responsable del seguimiento</div>
-                        </div>
-                        <div class="row">
-                            <div class="col">Nombre</div>
-                            <div class="col">
-                                <select name="nombreResponsableSeguimiento" id="nombreResponsableSeguimiento" class="inputSize form-control">
-                                    <option value="" disabled selected>Seleccionar...</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                          <div class="col">Puesto</div>
-                          <div class="col">
-                              <input name="puestoResponsableSeguimiento" id="puestoResponsableSeguimiento" class="inputSize form-control" type="text"/>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col">Fecha</div>
-                          <div class="col">
-                              <input name="fechaResponsableSeguimiento" id="fechaResponsableSeguimiento" class="inputSize form-control" type="date"/>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row no-gutters section rounded">
-                      <div class="col text-center">
-                        <input type="hidden" id="status" name="status" value="approval">
-                        <button class="btn btn-primary" onclick="getData()">Guardar</button>
-                        <button class="btn btn-primary" id="closeModal">Cerrar</button>
-                      </div>
-                    </div>
-                </form><!--End form-->
-              </div><!--End form/request container -- modal body-->
-          </div>
-      </div>
+          <div class="row no-gutters section rounded">
+              <div class="col-3">
+                <img src="http://laboratorioasesores.com/sites/default/files/logo.png" class="logo">
+              </div>
+              <div class="col headerText">
+                SOLICITUD DE MEJORA<br/>
+                REG-021-SGC<br/>
+              </div>
+            </div>
+        </div><!--End form/request container-->
     </div><!-- Page Content -->
   </div>       
 
@@ -206,23 +66,11 @@
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script> -->
   <script src="./script.js"></script>
   <script>
-    window.onload = () => {
-      getNames('nombreResponsableAplicacion');
-      getNames('nombreResponsableSeguimiento');
-    }
     $(document).ready(function () {
       $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
       });
     });
-    $( '#ulMenu li a' ).on( 'click', function () {
-      $( '#ulMenu' ).find( 'li.active' ).removeClass( 'active' );
-      $( this ).parent( 'li' ).addClass( 'active' );
-    });
-    $('#closeModal').on('click',() => {
-      console.log('click cerrar' )
-      $('#aprobarSolicitud').modal('hide');
-    })
   </script>
 </body>
 </html>
