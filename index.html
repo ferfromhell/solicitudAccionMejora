@@ -14,7 +14,7 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
   
-  <title>Crear plan de accion</title>
+  <title>Seguimiento de accion</title>
 </head>
 <body>
   <div class="wrapper">
@@ -29,10 +29,10 @@
           <li class="">
             <a href="./aprobarAccion.html">Aprobar - Rechazar</a>
           </li>
-          <li class="active">
+          <li class="">
             <a href="./planearAccion.html">Plan de accion</a>
           </li>
-          <li class="">
+          <li class="active">
             <a href="./seguimientoAccion.html">Seguimiento</a>
           </li>
       </ul>
@@ -60,7 +60,7 @@
                 <tr>
                   <th scope="row">1</th>
                   <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                  <td>Espera aprobacion</td>
+                  <td>Seguimiento</td>
                   <td>
                     <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#aprobarSolicitud">
                       Editar
@@ -70,7 +70,7 @@
                 <tr>
                   <th scope="row">2</th>
                   <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                  <td>Espera aprobacion</td>
+                  <td>Seguimiento</td>
                   <td>
                     <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#aprobarSolicitud">
                       Editar
@@ -80,7 +80,7 @@
                 <tr>
                   <th scope="row">3</th>
                   <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                  <td>Espera aprobacion</td>
+                  <td>Seguimiento</td>
                   <td>
                     <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#aprobarSolicitud">
                       Editar
@@ -94,55 +94,103 @@
           <div class="modal-content">
             <div class="modal-header">
               <!--Header-->
-                  <h5 class="modal-title" id="exampleModalLabel">Crear plan de accion</h5>
+                  <h5 class="modal-title" id="exampleModalLabel">Seguimiento de accion</h5>
             </div><!--End modal header-->
               <div class="modal-body">
                 <form id="solicitudAccion">
-                    <!-- plan de accion -->
+                    <!-- Seguimiento de la accion -->
                     <div class="row no-gutters section rounded">
                       <div class="col">
                         <div class="row">
-                          <div class="col headerText">Plan de accion</div>
-                          <div class="col-1">
-                            <button type="button" class="btn btn-outline-primary btn-sm" onclick="addActivity();">+</button>
+                          <div class="col headerText">Seguimiento de la accion</div>
+                        </div>
+                        <div class="row">
+                          <div class="col-3">Resultados obtenidos, conclusion de la accion de mejora:</div>
+                          <div class="col">
+                            <textarea name="resultadosInput" id="resultadosInput" class="inputSize form-control" placeholder="Resultados y conclusion" rows="6"></textarea>
                           </div>
                         </div>
                         <div class="row">
-                          <div class="col" id="actionsContainer">
-                            <div class="row" id="actionHeaders">
-                              <div class="col-4">Descripcion de la actividad</div>
-                              <div class="col">Responsable</div>
-                              <div class="col">Fecha de inicio</div>
-                              <div class="col">Fecha de cierre</div>
-                            </div>
-                            <!-- Template -->
-                            <template id="tempRow">
-                              <div class="row">
-                                <div class="col-4">
-                                  <input name="descripcionActividad" id="descripcionActividad" class="inputSize form-control" type="text" placeholder="Descripcion"/>
-                                </div>
-                                <div class="col">
-                                    <select name="nombreResponsable" id="nombreResponsable" class="inputSize form-control">
-                                        <option value="" disabled selected>Seleccionar...</option>
-                                    </select>
-                                </div>
-                                <div class="col">
-                                  <input name="inicioActividad" id="inicioActividad" class="inputSize form-control" type="date"/>
-                                </div>
-                                <div class="col">
-                                  <input name="cierreActividad" id="cierreActividad" class="inputSize form-control" type="date"/>
-                                </div>
+                          <div class="col">Cierre de la accion:</div>
+                          <div class="col">
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="confirmacionSeguimiento" value="Si"/>
+                                  <label class="form-check-label" for="confirmacionSeguimiento">
+                                    Si
+                                  </label>
                               </div>
-                            </template>
-                            <!-- Template -->
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="confirmacionSeguimiento" value="No"/>
+                                  <label class="form-check-label" for="confirmacionSeguimiento">
+                                    No
+                                  </label>
+                              </div> 
+                          </div>
+                          <div class="col">Fecha:</div>
+                          <div class="col"><input name="fechaCierreAccion" id="fechaCierreAccion" class="inputSize form-control" type="date"/></div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--responsabels-->
+                    <div class="row no-gutters section rounded">
+                      <div class="col">
+                        <div class="row">
+                            <div class="col text-center">Responsable de la aplicacion de la accion</div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Nombre</div>
+                            <div class="col">
+                                <select name="nombreResponsableAplicacion" id="nombreResponsableAplicacion" class="inputSize form-control">
+                                    <option value="" disabled selected>Seleccionar...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">Puesto</div>
+                          <div class="col">
+                              <input name="puestoResponsableAplicacion" id="puestoResponsableAplicacion" class="inputSize form-control" type="text"/>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">Fecha</div>
+                          <div class="col">
+                              <input name="fechaResponsableAplicacion" id="fechaResponsableAplicacion" class="inputSize form-control" type="date"/>
                           </div>
                         </div>
                       </div>
-                    </div><!--End activity holder-->
+                    </div>
+                    <div class="row no-gutters section rounded">
+                      <div class="col">
+                        <div class="row">
+                            <div class="col text-center">Responsable del seguimiento</div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Nombre</div>
+                            <div class="col">
+                                <select name="nombreResponsableSeguimiento" id="nombreResponsableSeguimiento" class="inputSize form-control">
+                                    <option value="" disabled selected>Seleccionar...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">Puesto</div>
+                          <div class="col">
+                              <input name="puestoResponsableSeguimiento" id="puestoResponsableSeguimiento" class="inputSize form-control" type="text"/>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">Fecha</div>
+                          <div class="col">
+                              <input name="fechaResponsableSeguimiento" id="fechaResponsableSeguimiento" class="inputSize form-control" type="date"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <div class="row no-gutters section rounded">
                       <div class="col text-center">
-                          <button class="btn btn-primary" onclick="getData()">Guardar</button>
-                          <button class="btn btn-primary" id="closeModal">Cerrar</button>
+                        <input type="hidden" id="status" name="status" value="approval">
+                        <button class="btn btn-primary" onclick="getData()">Guardar</button>
+                        <button class="btn btn-primary" id="closeModal">Cerrar</button>
                       </div>
                     </div>
                 </form><!--End form-->
@@ -159,7 +207,8 @@
   <script src="./script.js"></script>
   <script>
     window.onload = () => {
-      getNames('nombreResponsable');
+      getNames('nombreResponsableAplicacion');
+      getNames('nombreResponsableSeguimiento');
     }
     $(document).ready(function () {
       $('#sidebarCollapse').on('click', function () {
@@ -171,7 +220,8 @@
       $( this ).parent( 'li' ).addClass( 'active' );
     });
     $('#closeModal').on('click',() => {
-      $(aprobarSolicitud).modal('hide');
+      console.log('click cerrar' )
+      $('#aprobarSolicitud').modal('hide');
     })
   </script>
 </body>

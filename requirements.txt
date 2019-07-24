@@ -1,0 +1,38 @@
+1. Index
+  Create new request;
+  Show aproval list;
+  Show action planning list;
+  Show follow up list;
+2.  New request
+  Describe action;
+  Why?
+  Return an id when saved;
+  save button
+3. Approval
+  Benefits;
+  observations
+  name of the employee;
+  aprove?
+4. Plan action
+  Describe activity
+  name of the employee
+  begining date
+  ending date
+  * new action row must be created dynamically
+  Save button;
+5.  Follow up Upgrade;
+  results and conclusion
+  is closed?
+  date
+  name of employee who aplly the action
+  position
+  date
+  name of employee responsable of follow up the action
+  position
+  date
+  Save button;
+6.  Lists 
+  for each list show id,desc,status 
+  In order to change status redirect or show in a modal each section
+  Only admin 
+
