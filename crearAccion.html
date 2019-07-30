@@ -71,6 +71,35 @@
               </div>
             </div>
           </div>
+          <!-- More persons -->
+          <div class="row no-gutters section rounded">
+            <div class="col">
+              <div class="row">
+                <div class="col headerText">Añadir mas personas</div>
+                <div class="col-1">
+                  <button type="button" class="btn btn-outline-primary btn-sm" onclick="addPerson();">+</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col" id="actionsContainer">
+                  <div class="row" id="actionHeaders">
+                    <div class="col">Responsable</div>
+                  </div>
+                  <!-- Template -->
+                  <template id="tempRow">
+                    <div class="row">
+                      <div class="col">
+                          <select name="nombreResponsable" id="nombreResponsable" class="inputSize form-control">
+                              <option value="" disabled selected>Seleccionar...</option>
+                          </select>
+                      </div>
+                    </div>
+                  </template>
+                  <!-- Template -->
+                </div>
+              </div>
+            </div>
+          </div><!--End activity holder-->
           <div class="row no-gutters section rounded">
               <div class="col text-center">
                   <input type="hidden" id="status" name="status" value="createNew">

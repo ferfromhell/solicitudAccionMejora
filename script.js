@@ -64,3 +64,18 @@ const addActivity = () => {
   idActivity++;
   return 'added'
 }
+const addPerson = () => {
+  let frag=document.createDocumentFragment();
+  let temp= document.getElementById('tempRow');
+  temp=temp.cloneNode(true);
+  frag.appendChild(temp.content);
+  let newResp = frag.children[0].children[0].children[0];
+  newResp.setAttribute('id',"nombreResponsable"+idActivity)
+  newResp.setAttribute('name',"nombreResponsable"+idActivity)
+
+  document.getElementById('actionsContainer').appendChild(frag);
+  getNames('nombreResponsable'+idActivity);
+  
+  idActivity++;
+  return 'added'
+}
