@@ -79,3 +79,10 @@ const addPerson = () => {
   idActivity++;
   return 'added'
 }
+const showHidePuntaje = () => {
+  if(document.getElementById("confirmacionAprobacion1").checked){
+    document.getElementById('puntajeMejora').style.display = 'block';
+  }else{
+    document.getElementById('puntajeMejora').style.display = 'none';
+  }
+}
