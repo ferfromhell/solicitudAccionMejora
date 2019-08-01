@@ -1,7 +1,19 @@
 
 const  getNames = (id) => {
   const select = document.getElementById(id)
+  const url = 'https://asesores.ac-labs.com.mx/Mantenimiento/Development/AccionMejora/api_AccionMejora.php?api=empleados';  
+  let param = {api:'empleados'}
   const names = [];
+
+  fetch(url,{
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json' 
+    }
+  }).then(res => res.json())
+  .catch(error=>console.log(error))
+  .then(response => console.log(response));
+
   let i = 0;
   while(i<10){
     names.push({name: ('Employe'+i), id:i});
