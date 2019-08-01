@@ -13,7 +13,7 @@ const  getNames = (id) => {
   }).then(res => res.json())
   .catch(error=>console.log(error))
   .then(response => console.log(response));
-
+  console.log('asdasdasd')
   let i = 0;
   while(i<10){
     names.push({name: ('Employe'+i), id:i});
