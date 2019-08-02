@@ -12,20 +12,20 @@ const  getNames = (id) => {
     }
   }).then(res => res.json())
   .catch(error=>console.log(error))
-  .then(response => console.log(response));
-  console.log('asdasdasd')
+  .then(response => names = [...response]);
+  console.log(names)
   let i = 0;
-  while(i<10){
-    names.push({name: ('Employe'+i), id:i});
-    i++;
-  }
+  // while(i<10){
+  //   names.push({name: ('Employe'+i), id:i});
+  //   i++;
+  // }
   i=0;
   while(i<names.length){
     let newOptGroup = document.createElement('optgroup');
-    newOptGroup.label = names[i].name;
+    newOptGroup.label = names[i].value;
     let option = document.createElement('option');
-    option.value = names[i].id;
-    option.text = names[i].name;
+    option.value = names[i].value;
+    option.text = names[i].text;
     newOptGroup.appendChild(option);
     select.appendChild(newOptGroup);
     i++
